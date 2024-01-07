@@ -6,7 +6,7 @@ import timeGridPlugin from '@fullcalendar/timegrid';
 import listPlugin from '@fullcalendar/list';
 import "./CalendarMain.css"
 
-const CalendarMain = () => {
+const CalendarMain = ({onDateChange}) => {
     return (
         <div>
             <FullCalendar
@@ -16,6 +16,7 @@ const CalendarMain = () => {
 
                 dateClick={(date) => {
                     console.log("Clicked date:", date.dateStr);
+                    onDateChange(date)
                 }}
             />
         </div>

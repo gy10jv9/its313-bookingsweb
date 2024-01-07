@@ -4,7 +4,7 @@ import { Collapse, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './Events.css'
 
-const Events = () => {
+const Events = ({selectedDate}) => {
     const [events, setEvents] = useState([])
 
     const toggleCardContent = (eventId) => {
@@ -27,7 +27,7 @@ const Events = () => {
 
     return (
         <div>
-            <h1 className='container'> Event Reservations </h1>
+            <h1 className='container'> Event Reservations {selectedDate.toString()} </h1>
             <div className='container-fieldName'>
                 <div className='fldName evntTitle'> Event Title </div>
                 <div className='fldName'> Date Start/End </div>
